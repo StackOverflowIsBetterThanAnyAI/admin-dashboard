@@ -1,0 +1,360 @@
+@font-face {
+    font-family: roboto-medium;
+    src: url(./assets/fonts/Roboto-Medium.ttf);
+}
+
+@font-face {
+    font-family: roboto-bold;
+    src: url(./assets/fonts/Roboto-Bold.ttf);
+}
+
+* {
+    border: none;
+    font-family: roboto-medium;
+    margin: 0;
+    padding: 0;
+}
+
+@media only screen and (min-width: 1280px) {
+}
+
+@media only screen and (max-width: 1280px) {
+}
+
+@media only screen and (max-width: 768px) {
+}
+
+@media only screen and (max-width: 384px) {
+}
+
+body {
+    background-color: #71717a;
+}
+
+h1 {
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+hr {
+    border: 1px solid #b5b5b8;
+}
+
+input {
+    border-radius: 16px;
+    padding: 4px 8px;
+}
+
+#dashboard {
+    background-color: #2563eb;
+    display: flex;
+    flex-direction: column;
+    grid-area: 1 / 1 / 7 / 3;
+    justify-content: flex-start;
+    padding: 24px;
+}
+
+#dashboard > *:focus-visible {
+    outline: #f4f4f5 solid 4px;
+    z-index: 9;
+}
+
+#dashboard button,
+#searchbar button {
+    background-color: #2563eb;
+    border-radius: 16px;
+    color: #f8fafc;
+}
+
+#dashboard button:hover,
+#searchbar button:hover {
+    cursor: pointer;
+    background-color: #3d72e5;
+}
+
+#dashboard button:active,
+#searchbar button:active {
+    background-color: rgb(83, 123, 208);
+}
+
+#dashboard span {
+    font-size: 1.5rem;
+}
+
+#dashboard > button {
+    align-items: center;
+    display: flex;
+    gap: 24px;
+    justify-content: left;
+    padding: 8px 0px;
+}
+
+#dashboard > button > svg {
+    padding: 0px 0px 0px 8px;
+    max-width: 32px;
+    min-width: 32px;
+}
+
+#dashboard > button:first-of-type > svg {
+    max-width: 48px;
+    min-width: 48px;
+}
+
+#dashboard > button:first-of-type {
+    gap: 8px;
+    margin-bottom: 32px;
+}
+
+#dashboard > button:nth-child(7) {
+    margin-bottom: 32px;
+}
+
+#main {
+    background-color: #d4d4d8;
+    display: grid;
+    grid-area: 2 / 3 / 7 / 8;
+    grid-template: auto / 5fr 2fr;
+}
+
+#main > * {
+    display: grid;
+    gap: 16px;
+    grid-auto-rows: auto;
+    padding: 24px;
+}
+
+#projects {
+    grid-template: 48px repeat(3, auto) auto / 1fr 1fr;
+}
+
+#projects > div:first-of-type {
+    grid-column: 1 / span 2;
+}
+
+#announcements {
+    grid-template: repeat(2, 48px auto) minmax(0px, auto) / 1fr;
+}
+
+#announcements button:focus-visible,
+#searchbar *:focus-visible {
+    outline: #71717a solid 4px;
+}
+
+#new:focus-visible,
+#upload:focus-visible,
+#share:focus-visible {
+    outline: #a1a1a2 solid 4px;
+}
+
+#announcements > div:nth-child(2n - 1),
+#projects > div:first-of-type {
+    align-self: flex-end;
+    font-size: 1.125rem;
+}
+
+/* xxxxxxxxxx */
+
+#projects > div:not(:first-of-type) {
+    background-color: #f4f4f5;
+    border-left: 8px solid #eab308;
+    border-radius: 8px;
+    box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.15);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 24px;
+}
+
+#searchbar {
+    background-color: #f4f4f5;
+    grid-area: 1 / 3 / 2 / 8;
+    box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.25);
+    z-index: 9;
+}
+
+#searchbar button {
+    padding: 8px 16px;
+}
+
+#searchbar > div {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-between;
+}
+
+#searchbar .search {
+    align-items: center;
+    display: grid;
+    grid-template: 100% / repeat(11, 1fr);
+    height: 100%;
+}
+
+#searchbar .user {
+    align-items: center;
+    display: grid;
+    grid-template: 100% / 1fr 2fr repeat(3, 1fr) 32px;
+}
+
+#searchbar .search > *,
+#searchbar .user > * {
+    margin: 8px;
+}
+
+#searchbar #avatarSearch {
+    background-color: #eab308;
+    border-radius: 100%;
+    grid-area: 1 / 9 / 2 / 10;
+    max-width: 48px;
+    min-width: 48px;
+}
+
+#searchbar #avatarUser {
+    background-color: #eab308;
+    border-radius: 100%;
+    justify-self: right;
+    max-width: 64px;
+    min-width: 64px;
+}
+
+#searchbar #bell {
+    background-color: #f4f4f5;
+    grid-area: 1 / 8 / 2 / 9;
+}
+
+#searchbar #bell:hover {
+    background-color: #d4d4d8;
+    cursor: pointer;
+}
+
+#searchbar #bell:active {
+    background-color: #b5b5b8;
+    cursor: pointer;
+}
+
+#searchbar #greetings > div:first-of-type {
+    font-size: 0.875rem;
+}
+
+#searchbar #greetings > div:nth-of-type(2) {
+    font-weight: 900;
+}
+
+#searchbar #magnify {
+    grid-area: 1 / 1 / 2 / 2;
+    justify-self: right;
+}
+
+#searchbar #search {
+    grid-area: 1 / 2 / 2 / 7;
+}
+
+#searchbar #userName {
+    font-weight: 700;
+    grid-area: 1 / 10 / 2 / 12;
+}
+
+#searchbar svg {
+    max-width: 32px;
+    min-width: 32px;
+}
+
+.announcements,
+.trending {
+    background-color: #f4f4f5;
+    box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.15);
+    border-radius: 16px;
+    gap: 8px;
+    justify-content: center;
+}
+
+.announcements {
+    padding: 8px 16px;
+}
+
+.containerGrid {
+    display: grid;
+    grid-template: repeat(6, 1fr) / repeat(7, 1fr);
+    margin: auto;
+    max-width: 1280px;
+    min-height: 100svh;
+}
+
+.flex {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex > button {
+    border-radius: 8px;
+    padding: 4px;
+    text-align: left;
+}
+
+.flex > button:hover {
+    background-color: #d4d4d8;
+    cursor: pointer;
+}
+
+.flex > button:active {
+    background-color: #b5b5b8;
+}
+
+.flex > button > :first-child {
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.flex > button > :nth-child(2),
+#projects > div > .projectDescription > :nth-child(2) {
+    display: -webkit-box;
+    font-size: 0.875rem;
+    line-clamp: 3;
+    overflow: hidden;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+}
+
+.flexRow {
+    display: flex;
+    gap: 24px;
+    justify-content: flex-end;
+}
+
+.flexRow > svg {
+    max-width: 24px;
+    min-width: 24px;
+}
+
+.projectDescription > div:first-child {
+    font-weight: 700;
+}
+
+.trending {
+    font-size: 0.875rem;
+    overflow: hidden;
+    padding: 8px 16px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.trending > div {
+    align-items: center;
+    display: flex;
+    gap: 8px;
+}
+
+.trending > div > div:nth-child(2) {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    justify-content: center;
+}
+
+.trending svg {
+    background-color: #a1a1aa;
+    border-radius: 100%;
+    max-width: 32px;
+    min-width: 32px;
+}
